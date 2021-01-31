@@ -1,0 +1,232 @@
+
+/* css reset */
+*{
+    margin: 0;
+    padding:0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* css variables */
+:root{
+    --navbar-height:59px;
+}
+
+
+/* navigation bar */
+#navbar{
+    display: flex;
+    align-items: center; 
+    /* position: sticky;   */
+    top: 0px;
+}
+/*navigation bar: logo and image */
+#logo{
+    margin: -15px -25px;
+}
+#logo img{
+    height: 70px;
+    margin: 31px 40px;
+}
+/* navigation bar:list styling */
+#navbar{
+    position: relative;
+    position: sticky;
+    /* relative position black strip was long is se sab in position ajega */
+}
+#navbar ul{
+    display: flex;
+    /* directly row m ajenge */
+}
+#navbar::before{
+    content: "";
+    background-color: rgb(8, 0, 7);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    /* black strip appears so zindex -1 se content appear on the black strip */
+    z-index: -1;
+    opacity: 0.8;
+    
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.1rem;
+}
+#navbar ul li a{
+    display: block;
+    padding: 2px 20px;
+    border-radius: 22px;
+    text-decoration: none;
+    color: white;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* home section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 504px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before{
+    content: "";
+    background:url(../images/bg1.jpg) no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    /* black strip appears so zindex -1 se content appear on the black strip */
+    z-index: -1;
+    opacity: 0.89;
+}
+#home h1{
+    font-size: 2.2rem;
+    color: white;
+    text-align: center;
+}
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+/* service section */
+#services{
+    margin: 34px;
+    display: flex;
+}
+#services .box{
+    border: 2px solid red;
+    padding: 34px;
+    margin: 3px 6px;
+    border-radius: 23px;
+    background-color:rgb(199, 193, 193);
+}
+
+#services .box img{
+    height: 160px;
+    display: block;
+    margin: auto;
+}
+#services{}
+#services{}
+
+/* clients section */
+#client-section{
+    height: 344px;
+    /* background: url(images/contact.jpg);
+    background-image: url(images/logo1.jpg); */
+    background-color: rgb(228, 216, 109);
+    /* opacity: 0; */
+    
+    
+}
+#clients{
+    display: flex;justify-content: center;
+    align-items: center;
+}
+
+.heading{
+    font-size: 2.8rem;
+    padding-top: 20px;
+
+}
+
+#clients img{
+    height: 140px;
+}
+/* #client-section::before{
+    content: "";
+    position: absolute;
+    background:url('images/contact.jpg');
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+} */
+.client-item{
+    padding: 34px;
+}
+
+/* contact section */
+#contact{
+position: relative;
+background-color: beige;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+
+}
+#contact-box form{
+    /* width: 40%; */
+}
+#contact-box label{
+    font-size: 1.3rem;
+}
+/* #contact::before{
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+z-index: -1;
+opacity: 0.7;
+background: url(images/contact.jpg);
+} */
+
+/* footer */
+footer{
+    background-color: black;
+    color: white;
+    padding: 9px 20px;
+
+}
+/* utility classes */
+.h-primary{
+
+    font-size: 2.8rem;
+    padding-top: 170px;
+    text-align: center;
+    /* justify-content: center; */
+
+}
+.h-secondary{
+    font-size: 2.3rem;
+    padding: 12px;
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color:brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: burlywood;
+}
+.center{
+    text-align: center;
+}
